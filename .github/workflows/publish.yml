@@ -1,10 +1,19 @@
+---
+name: Publish RevealJS presentation
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-	@@ -16,10 +16,13 @@ jobs:
+        uses: actions/checkout@v2
+
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
@@ -18,6 +27,7 @@ jobs:
 
       - name: Build RevealJS presentation
         run: npm run prepare  # Run the prepare script defined in package.json
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
