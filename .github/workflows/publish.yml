@@ -25,8 +25,10 @@ jobs:
       - name: Install assumeeyes
         run: dnf install --assumeyes --quiet htmltest nodejs
 
-      - name: Build RevealJS presentation
-        run: npm run prepare 
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y htmltest nodejs
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
