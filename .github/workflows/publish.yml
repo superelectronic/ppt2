@@ -1,0 +1,25 @@
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+	@@ -16,10 +16,13 @@ jobs:
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.13'  # Use the appropriate Node.js version here
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install asciidoctor-revealjs
+        run: npm install asciidoctor-revealjs --save
+
+      - name: Build RevealJS presentation
+        run: npm run prepare  # Run the prepare script defined in package.json
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public  # Replace with the actual build output directory
