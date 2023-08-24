@@ -22,9 +22,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install assumeeyes
-        run: dnf install --assumeyes --quiet htmltest nodejs
-
       - name: Install dependencies
         run: |
           sudo apt-get update
