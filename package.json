@@ -1,13 +1,14 @@
 {
-    "name": "api-programming-languages",
-    "description": "Unveiling the World of API Documentation Languages: A Deep Dive into JSON and XML",
-    "version": "1",
-    "license": "MIT",
-    "dependencies": {
-      "@asciidoctor/reveal.js": ">=5.0.1",
-      "asciidoctor": ">=3.0.0",
-      "asciidoctor-kroki": ">=0.17.0"
-    },
+  "name": "api-programming-languages",
+  "description": "Unveiling the World of API Documentation Languages: A Deep Dive into JSON and XML",
+  "version": "1",
+  "license": "MIT",
+  "dependencies": {
+    "@asciidoctor/reveal.js": ">=5.0.1",
+    "asciidoctor": ">=3.0.0",
+    "asciidoctor-kroki": ">=0.17.0",
+    "core-js": ">=3.32.1" 
+  },
     "engines": {
       "node": ">=v16.13",
       "npm": ">=8.1"
