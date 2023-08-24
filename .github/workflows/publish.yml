@@ -22,11 +22,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install asciidoctor-revealjs
-        run: npm install asciidoctor-revealjs --save
+      - name: Install assumeeyes
+        run: dnf install --assumeyes --quiet htmltest nodejs
 
       - name: Build RevealJS presentation
-        run: npm run prepare  # Run the prepare script defined in package.json
+        run: npm run prepare 
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
