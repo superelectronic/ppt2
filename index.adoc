@@ -1,0 +1,468 @@
+
+= Unveiling the World of API Documentation Languages: A Deep Dive into JSON and XML
+:author: Gaurav Trivedi
+:backend: revealjs
+:customcss: main.css
+:highlightjs-languages: asciidoc, shell, javascript
+:icons: font
+:imagesdir: images
+:lang: en
+:revdate: 2023-07-05
+:revealjs_autoPlayMedia: true
+:revealjs_autoSlide: 60000
+:revealjs_defaultTiming: 60
+:revealjs_minimumTimePerSlide: 60
+:revealjs_totalTime: 1200
+:revealjs_hash: true
+:revealjs_height: 1080
+:revealjs_parallaxBackgroundImage: {imagesdir}/background.jpg
+:revealjs_parallaxBackgroundSize: 2958px 2308px
+:revealjs_plugin_search: enabled
+:revealjs_slideNumber: true
+:revealjs_theme: white
+:revealjs_width: 1920
+:source-highlighter: highlightjs
+:title-slide-background-image: background.jpg
+:toc: preamble
+
+== Experience in JSON or XML?
+
+* No prior knowledge of JSON and XML is required.
+* No programming knowledge is required.
+
+> You will gain a lot from this session if you understand JSON and XML.
+
+[.columns]
+== Structured vs. Unstructured Data: What’s the Difference?
+
+[.column.is-half]
+.Structured data
+
+* Structured data is data that is organized in a predefined way, such as in a table or spreadsheet.
+* It is easy to search and analyze structured data because it has a clear and defined structure.
+* JSON and XML are both examples of structured data formats.
+
+[.column.is-half]
+.Unstructured data
+
+* Unstructured data is data that is not organized in a predefined way.
+* It can be text, images, audio, or video.
+* Unstructured data is more difficult to search and analyze than structured data because it does not have a clear and defined structure.
+
+
+=== What are JSON and XML?
+
+* JSON and XML are both text-based data formats that can be used to store structured data.
+* JSON is a lightweight format that is easy to read and write.
+* XML is a more complex format that offers more flexibility.
+
+== Data types and strcutured data
+* Numbers: integer and decimal (floating) numbers
+* Text
+* True or False statements
+* Custom types
+
+=== Data types in JOSN
+* JSON has three data types
+
+> Number, Strings, and Booleans
+
+=== Data types in XML
+* XML has only one data types
+
+> Strings
+
+== Strings
+* Text group together inside single or double quotes ("string")
+* Can have anything, from letter to numbers, to punctutation marks
+* Can have spaces
+
+> Example -> "tribe", "API documentation", "2"
+
+== Boolean
+*  Math with logic
+*  Boolean has only two values:
+** True
+** False
+
+
+== Vizualizing data types
+image::data-types.png[]
+
+
+== Collections
+
+* Structured data can have groups of data:
+** Arrays (lists)
+** Dictionaries (lookup tables)
+
+=== Arrays
+List of data values
+
+* It has:
+** A size
+** An order
+
+> Example, list of numbers -> 5, 3, -7, 9
+> list of strings -> "tribe", "API documentation", "2"
+
+=== Dictionaries
+Collection of data keys and values.
+
+* A key is used to look up a value, just like a dictionary
+
+> Example -> A collection of Indian states with geo location. 
+> "Uttar Pradesh": 10
+
+=== Summary
+Structured data can have:
+
+[.column]
+* Lists
+* Dictionaries
+* Dictionaries of lists
+* Lists of dictionaries
+* Dictionaries of dictionaries...and so on
+
+== Why all this is important to know?
+
+* API reponses almost always have strcutured data
+* API requests sometimes have strcutured data
+
+image::request-response.jpeg[]
+
+== Tools to document JSON and XML
+
+* Text editors of your choice, like Visual Studio Code
+
+[.columns]
+== JSON Basics
+
+[.column.is-half]
+.What is JSON?
+
+JavaScript Object Notation (JSON) is a lightweight data-interchange format that is easy for humans to read and write and for machines to parse and generate.
+
+[.column.is-half]
+.Common Use Cases
+
+JSON is widely used in web APIs for exchanging data, as developers can easily parse the data in almost any programming language.
+
+== Basic data types in JSON
+
+[.column]
+* Strings: text inside double or single quotation marks
+* Numbers: integer or floating, can be positive or negative
+* Booleans: true or false
+* Null: means nothing
+
+=== Arrays
+* Comma-separated list enclosed in square brackets
+* Can have combination of any data types
+
+> Example, [4, 7, 0, -9, -10] or ["blue", "red", "orange"] or ["56, "book", true, "name", 40]
+
+=== Objects
+* JSON's dictionaries enclosed in curly bracket
+* Key value pair separated by commas
+* Keys and values are separated by a colon
+* Key and value can be of any data type
+
+> Example, {"green": 46, "blue": 98, "pink": 45} or 
+
+[source,json]
+----
+{
+  "name": "John Doe",
+  "age": 30,
+  "city": "New York"
+}
+----
+
+=== Nesting
+Putting arrays and objects inside each other
+
+[.column]
+* Arrays inside objects
+* Objects inside arrays
+* Arrays inside Arrays
+* Objects inside objects
+
+== Documenting JSON requests
+
+|===
+| Field Name | Data Type | Description | Example Value | Required | Constraints
+
+| field_name_1
+| data_type_1
+| Description of the field.
+| "Example Value"
+| Yes/No 
+| Constraints or limitations
+
+| field_name_2
+| data_type_2
+| Description of the field.
+| "Example Value"
+| Yes/No 
+| Constraints or limitations
+
+| field_name_3
+| data_type_3
+| Description of the field.
+| "Example Value"
+| Yes/No 
+| Constraints or limitations
+
+|===
+
+=== Example
+
+[source,json]
+----
+{
+  "name": "John Doe",
+  "age": 30,
+  "email": "johndoe@example.com",
+  "subscribe": true
+}
+Note: All the data here is required. If not included, you may not get proper response from the server.
+----
+
+=== Documentation
+|===
+| Field Name | Data Type | Description | Example Value | Required | Constraints
+
+| name
+| string
+| The name of the user.
+| "John Doe"
+| Yes
+| Max length: 100 characters
+
+| age
+| number
+| The age of the user.
+| 30
+| Yes
+| Must be a positive integer
+
+| email
+| string
+| The email address of the user.
+| "johndoe@example.com"
+| Yes
+| Valid email format
+
+| subscribe
+| boolean
+| Indicates whether the user wants to subscribe.
+| true
+| No
+| -
+
+|===
+
+
+== Documenting JSON responses
+
+|===
+| Field Name | Data Type | Description | Example Value | Constraints
+
+| field_name_1
+| string
+| This field represents the name of the user.
+| "John Doe"
+| Max length: 50 characters
+
+| field_name_2
+| number
+| The user's age.
+| 30
+| Must be a positive integer
+
+| field_name_3
+| boolean
+| Indicates whether the user is active.
+| true
+| -
+
+| field_name_4
+| object
+| Additional details about the user.
+| {"location": "New York", "role": "Admin"}
+| -
+
+| field_name_5
+| array
+| List of user's hobbies.
+| ["Reading", "Hiking", "Cooking"]
+| Max items: 5
+
+| field_name_6
+| string
+| Email address of the user.
+| "johndoe@example.com"
+| Format: valid email
+
+|===
+
+== Example
+
+[source,json]
+----
+{
+  "user_id": 12345,
+  "username": "johndoe",
+  "email": "johndoe@example.com",
+  "registered": true,
+  "created_at": "2023-08-24T12:00:00Z"
+}
+----
+
+=== Documentation
+|===
+| Field Name | Data Type | Description | Example Value | Constraints
+
+| user_id
+| number
+| The unique identifier of the user.
+| 12345
+| Positive integer
+
+| username
+| string
+| The username of the user.
+| "johndoe"
+| Max length: 50 characters
+
+| email
+| string
+| The email address of the user.
+| "johndoe@example.com"
+| Valid email format
+
+| registered
+| boolean
+| Indicates whether the user is registered.
+| true
+| -
+
+| created_at
+| string
+| The timestamp when the user was created.
+| "2023-08-24T12:00:00Z"
+| ISO 8601 format
+
+|===
+
+
+== Documenting Nested JSON responses
+* Indentation - when objects are not reused
+* Separate Table - when objects are reused
+
+=== Example -> Indentation - when objects are not reused
+
+[source,json]
+----
+{
+  "user_id": 123,
+  "tasks": [
+    {
+      "title": "Complete Project A",
+      "status": "in_progress"
+    },
+    {
+      "title": "Review Project B",
+      "status": "pending"
+    }
+  ]
+}
+----
+
+=== Documentation
+
+|===
+| Field Name | Data Type | Description | Example Value
+
+| user_id
+| number
+| The ID of the user
+| 123
+
+| tasks
+| array
+| An array of tasks
+| 
+
+| &nbsp; &nbsp; title
+| string
+| The title of the task
+| Complete Project A and Review Project B
+
+| &nbsp; &nbsp;status
+| string
+| The status of the task
+| in_progress and pending
+
+|===
+
+=== Example -> Indentation - when objects are reused
+
+[source,json]
+----
+{
+  "username": "johndoe",
+  "email": "johndoe@example.com",
+  "tasks": [
+    {
+      "task_id": 1,
+      "status": "in_progress"
+    },
+    {
+      "task_id": 2,
+      "status": "pending"
+    }
+  ]
+}
+
+----
+
+=== Documentation
+
+|===
+| Field Name | Data Type | Description | Example Value
+
+| username
+| string
+| The username of the user.
+| "johndoe"
+
+| email
+| string
+| The email address of the user.
+| "johndoe@example.com"
+
+| tasks
+| array of objects
+| List of tasks associated with the user.
+| See task object details below
+
+|===
+
+=== Task Object Structure
+
+|===
+| Field Name | Data Type | Description | Example Value
+
+| title
+| string
+| The title of the task.
+| "Complete Project A"
+
+| status
+| string
+| The status of the task.
+| "in_progress"
+
+|===
