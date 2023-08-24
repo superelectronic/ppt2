@@ -7,14 +7,13 @@
     "@asciidoctor/reveal.js": ">=5.0.1",
     "asciidoctor": ">=3.0.0",
     "asciidoctor-kroki": ">=0.17.0",
-    "core-js": ">=3.32.1" 
+    "core-js": ">=3.32.1"
   },
-    "engines": {
-      "node": ">=v16.13",
-      "npm": ">=8.1"
-    },
-    "scripts": {
-      "prepare": "asciidoctor-revealjs --attribute revealjsdir=https://cdn.jsdelivr.net/npm/reveal.js@4.1.2 --require asciidoctor-kroki --attribute kroki-fetch-diagram=true -o public\\index.html index.adoc && xcopy /s /e /y images public\\images && xcopy /s /e /y css\\main.css public"
-    }    
+  "engines": {
+    "node": ">=16.13",
+    "npm": ">=8.1"
+  },
+  "scripts": {
+    "prepare": "asciidoctor-revealjs --attribute revealjsdir=https://cdn.jsdelivr.net/npm/reveal.js@4.1.2 --require asciidoctor-kroki --attribute kroki-fetch-diagram=true -o public/index.html index.adoc && cp -rv images public/ && cp -rv css/main.css public/"
   }
-  
+}
