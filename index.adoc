@@ -27,13 +27,6 @@
 :title-slide-background-image: background.jpg
 :toc: preamble
 
-== Experience in JSON or XML?
-
-* No prior knowledge of JSON and XML is required.
-* No programming knowledge is required.
-
-> You will gain a lot from this session if you understand JSON and XML.
-
 [.columns]
 == Structured vs. Unstructured Data: What’s the Difference?
 
