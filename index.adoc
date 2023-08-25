@@ -986,11 +986,9 @@ graph TD
     StartIcon2((2))
     StartIcon3((3))
 
-    StartIcon1 --> StartBox[Flexibility and Extensibility]
-    StartIcon2 --> MiddleBox[Conciseness and Readability]
-    StartIcon3 --> EndBox[Adoption in Modern APIs and Technologies]
-    StartBox -->|XML is more flexible and extensible, with the ability to store hierarchical data better than JSON.| StartIcon2
-    MiddleBox -->|JSON is concise and readable due to its simplified syntax, easier to parse and edit.| StartIcon3
+    StartIcon1 --> StartBox[Flexibility and Extensibility - Winner XML]
+    StartIcon2 --> MiddleBox[Conciseness and Readability - Winner JSON]
+    StartIcon3 --> EndBox[Adoption in Modern APIs and Technologies - Winner JSON]
 ----
 
 == Thank you for your time and attention!
