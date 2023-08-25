@@ -978,6 +978,25 @@ Placing tags inside tags
 [mermaid,target=user-journey,format=svg,theme=forest,.stretch]
 ----
 graph TD
+    style StartBox fill:#FFD700,stroke:#333,stroke-width:2px,fill-opacity:0.5
+    style MiddleBox fill:#7FFF00,stroke:#333,stroke-width:2px,fill-opacity:0.5
+    style EndBox fill:#00CED1,stroke:#333,stroke-width:2px,fill-opacity:0.5
+    style IconFill fill:#FFA500,stroke:#FFA500
+    
+    StartIcon1((1)):::IconFill
+    StartIcon2((2)):::IconFill
+    StartIcon3((3)):::IconFill
+
+    StartIcon1 --> StartBox[Flexibility and Extensibility]
+    StartIcon2 --> MiddleBox[Conciseness and Readability]
+    StartIcon3 --> EndBox[Adoption in Modern APIs and Technologies]
+    StartBox -->|XML is more flexible and extensible, with the ability to store hierarchical data better than JSON.| StartIcon2
+    MiddleBox -->|JSON is concise and readable due to its simplified syntax, easier to parse and edit.| StartIcon3
+----
+
+[mermaid,target=user-journey,format=svg,theme=forest,.stretch]
+----
+graph TD
     style StartBox fill:#FFD700,stroke:#333,stroke-width:2px,fill-opacity:0.8,stroke-dasharray: 5, 5, corner-radius: 10px, font-size: 14px, font-family: 'Arial'
     style MiddleBox fill:#7FFF00,stroke:#333,stroke-width:2px,fill-opacity:0.8,stroke-dasharray: 5, 5, corner-radius: 10px, font-size: 14px, font-family: 'Arial'
     style EndBox fill:#00CED1,stroke:#333,stroke-width:2px,fill-opacity:0.8,stroke-dasharray: 5, 5, corner-radius: 10px, font-size: 14px, font-family: 'Arial'
@@ -990,7 +1009,6 @@ graph TD
     StartIcon2 -->|JSON is concise and readable due to its simplified syntax, easier to parse and edit.| MiddleBox[Conciseness and Readability]
     StartIcon3 -->|While many modern APIs use JSON, XML still has widespread use in industries that demand backwards compatibility.| EndBox[Adoption in Modern APIs and Technologies]
 ----
-
 
 
 
