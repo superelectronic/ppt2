@@ -972,6 +972,23 @@ Placing tags inside tags
 
 |===
 
+== JSON vs XML
+[source,mermaid]
+----
+graph LR
+    style StartBox fill:#FFD700,stroke:#333,stroke-width:2px,fill-opacity:0.5
+    style MiddleBox fill:#7FFF00,stroke:#333,stroke-width:2px,fill-opacity:0.5
+    style EndBox fill:#00CED1,stroke:#333,stroke-width:2px,fill-opacity:0.5
+    style IconFill fill:#FFA500,stroke:#FFA500
+    
+    StartIcon1((1)):::IconFill
+    StartIcon2((2)):::IconFill
+    StartIcon3((3)):::IconFill
+
+    StartIcon1 --> StartBox[Flexibility and Extensibility]
+    StartIcon2 --> MiddleBox[Conciseness and Readability]
+    StartIcon3 --> EndBox[Adoption in Modern APIs and Technologies]
+----
 
 
 
