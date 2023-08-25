@@ -1,8 +1,9 @@
 
-= Unveiling the World of API Documentation Languages: A Deep Dive into JSON and XML
+= API Documentation Languages: A Deep Dive into JSON and XML
 :author: Gaurav Trivedi
 :backend: revealjs
 :customcss: main.css
+:auto-animate-easing=ease-in-out: true
 :highlightjs-languages: asciidoc, shell, javascript
 :icons: font
 :imagesdir: images
@@ -56,7 +57,7 @@
 * JSON is a lightweight format that is easy to read and write.
 * XML is a more complex format that offers more flexibility.
 
-== Data types and strcutured data
+== Data types and structured data
 * Numbers: integer and decimal (floating) numbers
 * Text
 * True or False statements
@@ -68,16 +69,29 @@
 > Number, Strings, and Booleans
 
 === Data types in XML
+
+[.column]
 * XML has only one data types
+** Strings
 
-> Strings
-
+[%auto-animate]
 == Strings
 * Text group together inside single or double quotes ("string")
 * Can have anything, from letter to numbers, to punctutation marks
 * Can have spaces
 
-> Example -> "tribe", "API documentation", "2"
+[%auto-animate]
+== Strings
+* Text group together inside single or double quotes ("string")
+* Can have anything, from letter to numbers, to punctutation marks
+* Can have spaces
+
+[source%linenums,js,auto-animate-easing="ease-in-out"]
+----
+"tribe"
+"API documentation"
+"2"
+----
 
 == Boolean
 
@@ -97,6 +111,8 @@ image::data-types.png[]
 ** Arrays (lists)
 ** Dictionaries (lookup tables)
 
+
+[%auto-animate]
 === Arrays
 List of data values
 
@@ -104,16 +120,39 @@ List of data values
 ** A size
 ** An order
 
-> Example, list of numbers -> 5, 3, -7, 9
-> list of strings -> "tribe", "API documentation", "2"
+[%auto-animate]
+=== Arrays
+List of data values
 
-=== Dictionaries
+* It has:
+** A size
+** An order
+
+[source%linenums,js,auto-animate-easing="ease-in-out"]
+----
+list of numbers -> 5, 3, -7, 9
+
+list of strings -> "tribe", "API documentation", "2"
+----
+
+[%auto-animate]
+=== Dictionary
 Collection of data keys and values.
 
 * A key is used to look up a value, just like a dictionary
 
-> Example -> A collection of Indian states with geo location. 
-> "Uttar Pradesh": 10
+[%auto-animate]
+=== Dictionary
+Collection of data keys and values.
+
+* A key is used to look up a value, just like a dictionary
+
+[source%linenums,js,data-id=numbers]
+----
+A collection of Indian states with geo location.
+
+"Uttar Pradesh": 10
+----
 
 === Summary
 Structured data can have:
@@ -157,22 +196,77 @@ JSON is widely used in web APIs for exchanging data, as developers can easily pa
 * Booleans: true or false
 * Null: means nothing
 
+
+[%auto-animate]
 === Arrays
 * Comma-separated list enclosed in square brackets
 * Can have combination of any data types
 
-> Example, [4, 7, 0, -9, -10] or ["blue", "red", "orange"] or ["56, "book", true, "name", 40]
 
+[%auto-animate]
+=== Arrays
+* Comma-separated list enclosed in square brackets
+* Can have combination of any data types
+
+[source%linenums,js,data-id=numbers]
+----
+[4, 7, 0, -9, -10]
+----
+
+[%auto-animate]
+=== Arrays
+* Comma-separated list enclosed in square brackets
+* Can have combination of any data types
+
+[source%linenums,js,data-id=numbers]
+----
+[4, 7, 0, -9, -10]
+["blue", "red", "orange"]
+----
+
+[%auto-animate]
+=== Arrays
+* Comma-separated list enclosed in square brackets
+* Can have combination of any data types
+
+
+[source%linenums,js,data-id=numbers]
+----
+[4, 7, 0, -9, -10]
+["blue", "red", "orange"]
+["56, "book", true, "name", 40]
+----
+
+
+[%auto-animate]
 === Objects
 * JSON's dictionaries enclosed in curly bracket
 * Key value pair separated by commas
 * Keys and values are separated by a colon
 * Key and value can be of any data type
 
-> Example, {"green": 46, "blue": 98, "pink": 45} or 
+[%auto-animate]
+=== Objects
+* JSON's dictionaries enclosed in curly bracket
+* Key value pair separated by commas
+* Keys and values are separated by a colon
+* Key and value can be of any data type
 
-[source,json]
+[source%linenums,js,data-id=numbers]
 ----
+{"green": 46, "blue": 98, "pink": 45}
+----
+
+[%auto-animate]
+=== Objects
+* JSON's dictionaries enclosed in curly bracket
+* Key value pair separated by commas
+* Keys and values are separated by a colon
+* Key and value can be of any data type
+
+[source%linenums,js,data-id=numbers]
+----
+{"green": 46, "blue": 98, "pink": 45}
 {
   "name": "John Doe",
   "age": 30,
@@ -189,11 +283,18 @@ Putting arrays and objects inside each other
 * Arrays inside Arrays
 * Objects inside objects
 
+[%auto-animate]
 == Documenting JSON requests
-
+[source%linenums,js,data-id=numbers]
 |===
 | Field Name | Data Type | Description | Example Value | Required | Constraints
+|===
 
+[%auto-animate]
+== Documenting JSON requests
+[source%linenums,js,data-id=numbers]
+|===
+| Field Name | Data Type | Description | Example Value | Required | Constraints
 | field_name_1
 | data_type_1
 | Description of the field.
@@ -217,23 +318,75 @@ Putting arrays and objects inside each other
 
 |===
 
+[%auto-animate]
 === Example
 
-[source,json]
+[source%linenums,js,data-id=numbers]
+----
+{}
+----
+
+[%auto-animate]
+=== Example
+
+[source%linenums,js,data-id=numbers]
 ----
 {
-  "name": "John Doe",
-  "age": 30,
-  "email": "johndoe@example.com",
-  "subscribe": true
+
 }
+----
+
+[%auto-animate]
+=== Example
+
+[source%linenums,js,data-id=numbers]
+----
+{
+ "name": "John Doe", 
+}
+----
+
+[%auto-animate]
+=== Example
+
+[source%linenums,js,data-id=numbers]
+----
+{
+ "name": "John Doe", 
+ "age": 30,
+ "email": "johndoe@example.com",
+}
+
 Note: All the data here is required. If not included, you may not get proper response from the server.
 ----
 
+[%auto-animate]
+=== Example
+
+[source%linenums,js,data-id=numbers]
+----
+{
+ "name": "John Doe", 
+ "age": 30,
+ "email": "johndoe@example.com",
+ "subscribe": true
+}
+
+Note: All the data here is required. If not included, you may not get proper response from the server.
+----
+
+[%auto-animate]
 === Documentation
+[source%linenums,js,data-id=numbers]
 |===
 | Field Name | Data Type | Description | Example Value | Required | Constraints
+|===
 
+[%auto-animate]
+=== Documentation
+[source%linenums,js,data-id=numbers]
+|===
+| Field Name | Data Type | Description | Example Value | Required | Constraints
 | name
 | string
 | The name of the user.
@@ -264,12 +417,18 @@ Note: All the data here is required. If not included, you may not get proper res
 
 |===
 
-
+[%auto-animate]
 == Documenting JSON responses
-
+[source%linenums,js,data-id=numbers]
 |===
 | Field Name | Data Type | Description | Example Value | Constraints
+|===
 
+[%auto-animate]
+== Documenting JSON responses
+[source%linenums,js,data-id=numbers]
+|===
+| Field Name | Data Type | Description | Example Value | Constraints
 | field_name_1
 | string
 | This field represents the name of the user.
@@ -308,9 +467,20 @@ Note: All the data here is required. If not included, you may not get proper res
 
 |===
 
-== Example
+[%auto-animate]
+=== Example
+[source%linenums,js,data-id=numbers]
+----
+{
+  "user_id": 12345,
+  "username": "johndoe"
 
-[source,json]
+}
+----
+
+[%auto-animate]
+=== Example
+[source%linenums,js,data-id=numbers]
 ----
 {
   "user_id": 12345,
@@ -321,10 +491,18 @@ Note: All the data here is required. If not included, you may not get proper res
 }
 ----
 
+[%auto-animate]
 === Documentation
+[source%linenums,js,data-id=numbers]
 |===
 | Field Name | Data Type | Description | Example Value | Constraints
+|===
 
+[%auto-animate]
+=== Documentation
+[source%linenums,js,data-id=numbers]
+|===
+| Field Name | Data Type | Description | Example Value | Constraints
 | user_id
 | number
 | The unique identifier of the user.
@@ -358,13 +536,18 @@ Note: All the data here is required. If not included, you may not get proper res
 |===
 
 
+[%auto-animate]
 == Documenting Nested JSON responses
 * Indentation - when objects are not reused
 * Separate Table - when objects are reused
+[source%linenums,js,data-id=numbers]
 
+[%auto-animate]
 === Example -> Indentation - when objects are not reused
 
-[source,json]
+[%auto-animate]
+=== Example -> Indentation - when objects are not reused
+[source%linenums,js,data-id=numbers]
 ----
 {
   "user_id": 123,
@@ -381,8 +564,16 @@ Note: All the data here is required. If not included, you may not get proper res
 }
 ----
 
+[%auto-animate]
 === Documentation
+[source%linenums,js,data-id=numbers]
+|===
+| Field Name | Data Type | Description | Example Value
+|===
 
+[%auto-animate]
+=== Documentation
+[source%linenums,js,data-id=numbers]
 |===
 | Field Name | Data Type | Description | Example Value
 
@@ -408,9 +599,12 @@ Note: All the data here is required. If not included, you may not get proper res
 
 |===
 
+[%auto-animate]
 === Example -> Indentation - when objects are reused
 
-[source,json]
+[%auto-animate]
+=== Example -> Indentation - when objects are reused
+[source%linenums,js,data-id=numbers]
 ----
 {
   "username": "johndoe",
@@ -426,10 +620,19 @@ Note: All the data here is required. If not included, you may not get proper res
     }
   ]
 }
-
 ----
 
+[%auto-animate]
 === Documentation
+[source%linenums,js,data-id=numbers]
+
+|===
+| Field Name | Data Type | Description | Example Value
+|===
+
+[%auto-animate]
+=== Documentation
+[source%linenums,js,data-id=numbers]
 
 |===
 | Field Name | Data Type | Description | Example Value
@@ -479,8 +682,6 @@ eXtensible Markup Language (XML) is a markup language for encoding documents in 
 .Historical Context​
 XML was widely used in the past due to its ability to represent complex data structures and its compatibility with different systems.​
 
-> XML has its own universe. This session does not intend to tell you everything about XML.
-
 
 == XML Syntax
 
@@ -489,18 +690,61 @@ XML has two ways of handling data:
 * Tags
 * Attributes
 
+[%auto-animate]
 == Tags
 * Start tag -> <content>
 * End tag -> </content>
 * Start and end tags should match.
 * You can only include letters, numbers, and underscores
- 
- > Example, <name>John Doe</name>
+
+[%auto-animate]
+== Tags
+* Start tag -> <content>
+* End tag -> </content>
+* Start and end tags should match.
+* You can only include letters, numbers, and underscores
+
+[source%linenums,js,data-id=numbers]
+----
+<name>John Doe</name>
+----
+
+[%auto-animate]
+== Tags
+* Start tag -> <content>
+* End tag -> </content>
+* Start and end tags should match.
+* You can only include letters, numbers, and underscores
+
+[source%linenums,js,data-id=numbers]
+----
+<name>John Doe</name>
+----
 
 * The content in these tags called string
 * It can hold any data type
 
-> Example, <name>John Doe</name> or <age>25</age> or <isenabled>false</isenabled>
+[%auto-animate]
+== Tags
+* Start tag -> <content>
+* End tag -> </content>
+* Start and end tags should match.
+* You can only include letters, numbers, and underscores
+
+[source%linenums,js,data-id=numbers]
+----
+<name>John Doe</name>
+----
+
+* The content in these tags called string
+* It can hold any data type
+
+[source%linenums,js,data-id=numbers]
+----
+<name>John Doe</name>
+<age>25</age>
+<isenabled>false</isenabled>
+----
 
 === Nested tags
 Placing tags inside tags
@@ -521,6 +765,7 @@ Placing tags inside tags
 </library>
 ----
 
+[%auto-animate]
 == Attributes
 
 * Key/value pair
@@ -530,12 +775,46 @@ Placing tags inside tags
 * It can have letters, numbers, and underscores only
 * Must start with a letter
 
-> <tag key="value">content</tag>
+[%auto-animate]
+== Attributes
+
+* Key/value pair
+* Both are strings
+* Key have no quotes
+* Values have quotes
+* It can have letters, numbers, and underscores only
+* Must start with a letter
+
+[source%linenums,js,data-id=numbers]
+----
+<tag key="value">content</tag>
+----
+
 > In APIs Attributes are used to indicate some property about data (also known as metadata) than data itself.
 
+[%auto-animate]
 === Attributes
 
-[source,xml]
+[source%linenums,js,data-id=numbers]
+----
+<book isbn="978-0345391803" 
+----
+
+[%auto-animate]
+=== Attributes
+
+[source%linenums,js,data-id=numbers]
+----
+<book isbn="978-0345391803" category="Fantasy">
+    <title>A Game of Thrones</title>
+    <author>George R.R. Martin</author>
+</book>
+----
+
+[%auto-animate]
+=== Attributes
+
+[source%linenums,js,data-id=numbers]
 ----
 <book isbn="978-0345391803" category="Fantasy">
     <title>A Game of Thrones</title>
@@ -544,11 +823,13 @@ Placing tags inside tags
 </book>
 ----
 
-== Documenting XML
+== Documenting XML response
 [.columns]
 * It is very similar to documeting JSON
 * An API request can have both of them
 * Elements in JSON are called tags in XML
+
+> XML has first line, we do not document it. It looks like -> <?xml version="1.0" encoding="UTF-8"?>
 
 [source,xml]
 ----
@@ -559,31 +840,140 @@ Placing tags inside tags
 </product>
 ----
 
+[%auto-animate]
 === Documentation
 
+[source%linenums,js,data-id=numbers]
 [cols="4a,4a,6a,4a"]
 |===
 | Field Name | Data Type | Description | Example Value
+|===
 
-| `<product>`
+[%auto-animate]
+=== Documentation
+
+[source%linenums,js,data-id=numbers]
+[cols="4a,4a,6a,4a"]
+|===
+| Field Name | Data Type | Description | Example Value
+| product
 | - | The root element that represents a product's information.
 | -
 
-| `<name>`
+| &nbsp; &nbsp; name
 | String | The element containing the name of the product.
 | Content: `Laptop`
 
-| `<price>`
+| &nbsp; &nbsp;price
 | Number | The element containing the price of the product.
 | Content: `999.99`
 
-| `<in_stock>`
+| &nbsp;&nbsp;in_stock
 | Boolean | The element indicating whether the product is in stock.
 | Content: `true`
 
 |===
 
 
+[%auto-animate]
+=== Attributes inside tags
+
+[source%linenums,js,data-id=numbers]
+----
+<product category="electronics">
+  <name 
+----
+
+[%auto-animate]
+=== Attributes inside tags
+
+[source%linenums,js,data-id=numbers]
+----
+<product category="electronics">
+  <name brand="Apple">iPhone 12</name>
+  <price 
+----
+
+[%auto-animate]
+=== Attributes inside tags
+
+[source%linenums,js,data-id=numbers]
+----
+<product category="electronics">
+  <name brand="Apple">iPhone 12</name>
+  <price currency="USD">899.99</price>
+  <in_stock available="true"/>
+</product>
+----
+
+[%auto-animate]
+=== Documentation
+
+[source%linenums,js,data-id=numbers]
+[cols="4a,3a,3a,3a,3a"]
+|===
+| Element | Data Type | Attributes | Description | Example Value
+|===
+
+[source%linenums,js,data-id=numbers]
+[cols="4a,3a,3a,3a,3a"]
+|===
+| Element | Data Type | Attributes | Description | Example Value
+| product
+| - | - | The root element representing a product.
+| -
+
+| &nbsp; &nbsp;name
+| String | `brand`: String | The name of the product.
+| Content: `iPhone 12`, Attribute: `brand="Apple"`
+
+| &nbsp; &nbsp;price
+| Number | `currency`: String | The price of the product.
+| Content: `899.99`, Attribute: `currency="USD"`
+
+| &nbsp; &nbsp;in_stock
+| Boolean | `available`: Boolean | Indicates if the product is in stock.
+| Attribute: `available="true"`
+
+|===
+
+
+== Documenting XML request
+
+[source,xml]
+----
+<createUserRequest>
+  <username>johndoe</username>
+  <age>28</age>
+  <is_active>true</is_active>
+</createUserRequest>
+----
+
+=== Documentation
+[cols="4a,3a,3a,3a,3a"]
+|===
+| Element | Data Type | Required | Description | Example Value
+
+| createUserRequest
+| - | Yes | The root element for creating a new user.
+| -
+
+| &nbsp; &nbsp;username
+| String | Yes | The username of the new user.
+| Content: `johndoe`
+
+| &nbsp; &nbsp;age
+| Integer | Yes | The age of the new user.
+| Content: `28`
+
+| &nbsp; &nbsp;is_active
+| Boolean | No | Indicates whether the new user is active.
+| Content: `true`
+
+|===
 
 
 
+[.columns.is-vcentered]
+== Thank you for your time and attention!
+image::question.png[]
