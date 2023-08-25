@@ -80,7 +80,8 @@
 > Example -> "tribe", "API documentation", "2"
 
 == Boolean
-*  Math with logic
+
+[.column]
 *  Boolean has only two values:
 ** True
 ** False
@@ -466,3 +467,123 @@ Note: All the data here is required. If not included, you may not get proper res
 | "in_progress"
 
 |===
+
+[.columns]
+== XML Basics
+
+[.column.is-half]
+.What is XML?
+eXtensible Markup Language (XML) is a markup language for encoding documents in a format that is both human-readable and machine-readable.​
+
+[.column.is-half]
+.Historical Context​
+XML was widely used in the past due to its ability to represent complex data structures and its compatibility with different systems.​
+
+> XML has its own universe. This session does not intend to tell you everything about XML.
+
+
+== XML Syntax
+
+XML has two ways of handling data:
+
+* Tags
+* Attributes
+
+== Tags
+* Start tag -> <content>
+* End tag -> </content>
+* Start and end tags should match.
+* You can only include letters, numbers, and underscores
+ 
+ > Example, <name>John Doe</name>
+
+* The content in these tags called string
+* It can hold any data type
+
+> Example, <name>John Doe</name> or <age>25</age> or <isenabled>false</isenabled>
+
+=== Nested tags
+Placing tags inside tags
+
+[source,xml]
+----
+<library>
+  <book>
+    <title>Harry Potter and the Sorcerer's Stone</title>
+    <author>J.K. Rowling</author>
+    <genre>Fantasy</genre>
+  </book>
+  <book>
+    <title>The Hobbit</title>
+    <author>J.R.R. Tolkien</author>
+    <genre>Fantasy</genre>
+  </book>
+</library>
+----
+
+== Attributes
+
+* Key/value pair
+* Both are strings
+* Key have no quotes
+* Values have quotes
+* It can have letters, numbers, and underscores only
+* Must start with a letter
+
+> <tag key="value">content</tag>
+> In APIs Attributes are used to indicate some property about data (also known as metadata) than data itself.
+
+=== Attributes
+
+[source,xml]
+----
+<book isbn="978-0345391803" category="Fantasy">
+    <title>A Game of Thrones</title>
+    <author>George R.R. Martin</author>
+    <pojectedCost decimals="3" confidence="5">32.45</projectedCost>
+</book>
+----
+
+== Documenting XML
+[.columns]
+* It is very similar to documeting JSON
+* An API request can have both of them
+* Elements in JSON are called tags in XML
+
+[source,xml]
+----
+<product>
+  <name>Laptop</name>
+  <price>999.99</price>
+  <in_stock>true</in_stock>
+</product>
+----
+
+=== Documentation
+
+[cols="4a,4a,6a,4a"]
+|===
+| Field Name | Data Type | Description | Example Value
+
+| `<product>`
+| - | The root element that represents a product's information.
+| -
+
+| `<name>`
+| String | The element containing the name of the product.
+| Content: `Laptop`
+
+| `<price>`
+| Number | The element containing the price of the product.
+| Content: `999.99`
+
+| `<in_stock>`
+| Boolean | The element indicating whether the product is in stock.
+| Content: `true`
+
+|===
+
+
+
+
+
