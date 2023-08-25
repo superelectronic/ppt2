@@ -973,35 +973,27 @@ Placing tags inside tags
 
 |===
 
-[.columns]
 == JSON vs XML
 
-[.columns.is-one-third]
-icon:bolt[size=2x] *Flexibility and Extensibility*
-XML is more flexible and extensible, with the ability to store hierarchical data better than JSON.​
-
-[.columns.is-one-third]
-icon:bolt[size=2x] *Conciseness and Readability​*
-JSON is concise and readable due to its simplified syntax, easier to parse and edit.​
-
-[.columns.is-one-third]
-icon:bolt[size=2x] *Adoption in Modern APIs and Technologies​*
-While many modern APIs use JSON, XML still has widespread use in industries that demand backwards compatibility.​
-
 [mermaid,target=user-journey,format=svg,theme=forest,.stretch]
-....
-timeline
-  title Content journey
-    section Identical
-      Reusable: Antora Content Sources
-    section Variations
-      Modify inline content: AsciiDoc Attribute : Antora Component : Antora Playbook
-      Modify block content: AsciiDoc Attribute : AsciiDoc Include: Antora Example: Antora Distributed Component Version
-      Add or remove entire page: Antora Pages: Antora Navigation: Antora Composer extension
-    section Delivery
-      Search : Antora Lunr extension
-      Aggregate document : Antora Assembler extension
-....
+----
+graph TD
+    style StartBox fill:#FFD700,stroke:#333,stroke-width:2px,fill-opacity:0.5
+    style MiddleBox fill:#7FFF00,stroke:#333,stroke-width:2px,fill-opacity:0.5
+    style EndBox fill:#00CED1,stroke:#333,stroke-width:2px,fill-opacity:0.5
+    style IconFill fill:#FFA500,stroke:#FFA500
+    
+    StartIcon1((1)):::IconFill
+    StartIcon2((2)):::IconFill
+    StartIcon3((3)):::IconFill
+
+    StartIcon1 --> StartBox[Flexibility and Extensibility]
+    StartIcon2 --> MiddleBox[Conciseness and Readability]
+    StartIcon3 --> EndBox[Adoption in Modern APIs and Technologies]
+    StartBox -->|XML is more flexible and extensible, with the ability to store hierarchical data better than JSON.| StartIcon2
+    MiddleBox -->|JSON is concise and readable due to its simplified syntax, easier to parse and edit.| StartIcon3
+----
+
 
 
 
