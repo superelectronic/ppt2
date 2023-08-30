@@ -33,7 +33,7 @@ jobs:
         run: npm install
 
       - name: Build RevealJS presentation
-        run: npm ci && npm run prepare 
+        run: npm ci && npm run present 
       
       - name: Setup Pages
         uses: actions/configure-pages@v3
