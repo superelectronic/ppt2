@@ -14,6 +14,6 @@
     "npm": ">=8.1"
   },
   "scripts": {
-    "prepare": "asciidoctor-revealjs --attribute revealjsdir=https://cdn.jsdelivr.net/npm/reveal.js@4.1.2 --require asciidoctor-kroki --attribute kroki-fetch-diagram=true -o public/index.html index.adoc && cp -rv images public/ && cp -rv css/main.css public/"
+    "present": "asciidoctor-revealjs --attribute revealjsdir=https://cdn.jsdelivr.net/npm/reveal.js@4.1.2 --require asciidoctor-kroki --attribute kroki-fetch-diagram=true -o public/index.html index.adoc && cp -rv images public/ && cp -rv css/main.css public/"
   }
 }
