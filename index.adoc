@@ -72,7 +72,7 @@
 == Strings
 * Text group together inside single or double quotes ("string")
 
-[source%linenums,js,data-id=numbers]
+[source%linenums,js,auto-animate-easing="ease-in-out"]
 ----
 ""
 ''
