@@ -71,8 +71,23 @@
 [%auto-animate]
 == Strings
 * Text group together inside single or double quotes ("string")
-* Can have anything, from letter to numbers, to punctutation marks
-* Can have spaces
+
+[source%linenums,js,data-id=numbers]
+----
+""
+''
+----
+
+[%auto-animate]
+== Strings
+* Text group together inside single or double quotes ("string")
+
+[source%linenums,js,auto-animate-easing="ease-in-out"]
+----
+"tribe"
+'API documentation'
+"2"
+----
 
 [%auto-animate]
 == Strings
@@ -83,7 +98,7 @@
 [source%linenums,js,auto-animate-easing="ease-in-out"]
 ----
 "tribe"
-"API documentation"
+'API documentation'
 "2"
 ----
 
@@ -276,18 +291,48 @@ Putting arrays and objects inside each other
 == Real-world JSON examples:
 * https://cloud.google.com/life-sciences/docs/reference/rest/v2beta/projects.locations
 * https://help.hcltechsw.com/onedb/1.0.1/rest/rest_011.html#rest_011__query_all
+* https://docs.imply.io/polaris/api-create-table/
+* https://www.ibm.com/docs/en/api-connect/2018.x?topic=ri-example-using-platform-rest-apis-publish-product-containing-soap-api
 
 [%auto-animate]
 == Documenting JSON requests
+
+
+[%auto-animate]
+== Documenting JSON requests
+
+*Option 1*
+
+[source%linenums,js,data-id=numbers]
+|===
+2+| Fields | 
+| field_name1 | Data type? Description? Example Value? Required? Constraints? |
+| field_name2 | Data type? Description? Example Value? Required? Constraints? |
+| field_namen | Data type? Description? Example Value? Required? Constraints? |
+|===
+
+[%auto-animate]
+== Documenting JSON requests
+
+
+[%auto-animate]
+== Documenting JSON requests
+
+*Option 1*
+https://cloud.google.com/life-sciences/docs/reference/rest/v2beta/projects.locations
+https://docs.servicenow.com/bundle/rome-application-development/page/integrate/inbound-rest/concept/c_TableAPI.html
 
 
 [source%linenums,js,data-id=numbers]
 |===
-| Field Name | Data Type | Description | Example Value | Required | Constraints
+2+| Fields | 
+| field_name1 | Data type? Description? Example Value? Required? Constraints? |
+| field_name2 | Data type? Description? Example Value? Required? Constraints? |
+| field_namen | Data type? Description? Example Value? Required? Constraints? |
 |===
 
-[%auto-animate]
-== Documenting JSON requests
+*Option 2* - https://www.ibm.com/docs/en/cloud-paks/cloud-pak-watson-aiops/4.1.0?topic=crds-aimodelui-v1
+
 [source%linenums,js,data-id=numbers]
 |===
 | Field Name | Data Type | Description | Example Value | Required | Constraints
@@ -305,56 +350,7 @@ Putting arrays and objects inside each other
 | Yes/No 
 | Constraints or limitations
 
-| field_name_3
-| data_type_3
-| Description of the field.
-| "Example Value"
-| Yes/No 
-| Constraints or limitations
-
 |===
-
-[%auto-animate]
-=== Example
-
-[source%linenums,js,data-id=numbers]
-----
-{}
-----
-
-[%auto-animate]
-=== Example
-
-[source%linenums,js,data-id=numbers]
-----
-{
-
-}
-----
-
-[%auto-animate]
-=== Example
-
-[source%linenums,js,data-id=numbers]
-----
-{
- "name": "John Doe", 
-}
-----
-
-[%auto-animate]
-=== Example
-
-[source%linenums,js,data-id=numbers]
-----
-{
- "name": "John Doe", 
- "age": 30,
- "email": "johndoe@example.com",
-}
-
-Note: All the data here is required. If not included, you may not get proper response from the server.
-----
 
 [%auto-animate]
 === Example
@@ -370,13 +366,6 @@ Note: All the data here is required. If not included, you may not get proper res
 
 Note: All the data here is required. If not included, you may not get proper response from the server.
 ----
-
-[%auto-animate]
-=== Documentation
-[source%linenums,js,data-id=numbers]
-|===
-| Field Name | Data Type | Description | Example Value | Required | Constraints
-|===
 
 [%auto-animate]
 === Documentation
@@ -443,36 +432,7 @@ Note: All the data here is required. If not included, you may not get proper res
 | true
 | -
 
-| field_name_4
-| object
-| Additional details about the user.
-| {"location": "New York", "role": "Admin"}
-| -
-
-| field_name_5
-| array
-| List of user's hobbies.
-| ["Reading", "Hiking", "Cooking"]
-| Max items: 5
-
-| field_name_6
-| string
-| Email address of the user.
-| "johndoe@example.com"
-| Format: valid email
-
 |===
-
-[%auto-animate]
-=== Example
-[source%linenums,js,data-id=numbers]
-----
-{
-  "user_id": 12345,
-  "username": "johndoe"
-
-}
-----
 
 [%auto-animate]
 === Example
@@ -486,13 +446,6 @@ Note: All the data here is required. If not included, you may not get proper res
   "created_at": "2023-08-24T12:00:00Z"
 }
 ----
-
-[%auto-animate]
-=== Documentation
-[source%linenums,js,data-id=numbers]
-|===
-| Field Name | Data Type | Description | Example Value | Constraints
-|===
 
 [%auto-animate]
 === Documentation
@@ -534,15 +487,15 @@ Note: All the data here is required. If not included, you may not get proper res
 
 [%auto-animate]
 == Documenting Nested JSON responses
-* Indentation - when objects are not reused
-* Separate Table - when objects are reused
+* Indentation - best when objects are not getting reused much
+* Separate Table - best when objects are geeting reused
 [source%linenums,js,data-id=numbers]
 
 [%auto-animate]
-=== Example -> Indentation - when objects are not reused
+=== Example -> Indentation - best when objects are not getting reused much
 
 [%auto-animate]
-=== Example -> Indentation - when objects are not reused
+=== Example -> Indentation - best when objects are not getting reused much
 [source%linenums,js,data-id=numbers]
 ----
 {
@@ -551,10 +504,6 @@ Note: All the data here is required. If not included, you may not get proper res
     {
       "title": "Complete Project A",
       "status": "in_progress"
-    },
-    {
-      "title": "Review Project B",
-      "status": "pending"
     }
   ]
 }
@@ -596,10 +545,10 @@ Note: All the data here is required. If not included, you may not get proper res
 |===
 
 [%auto-animate]
-=== Example -> Indentation - when objects are reused
+=== Example -> Separate Table - best when objects are geeting reused
 
 [%auto-animate]
-=== Example -> Indentation - when objects are reused
+=== Example -> Separate Table - best when objects are geeting reused
 [source%linenums,js,data-id=numbers]
 ----
 {
