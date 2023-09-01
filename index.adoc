@@ -193,36 +193,34 @@ JSON is widely used in web APIs for exchanging data, as developers can easily pa
 
 [%auto-animate]
 === Arrays
-* Comma-separated list enclosed in square brackets
-* Can have combination of any data types
+* Enclosed in square brackets
+
+[source%linenums,js,data-id=numbers]
+----
+[]
+[]
+[]
+----
 
 
 [%auto-animate]
 === Arrays
-* Comma-separated list enclosed in square brackets
-* Can have combination of any data types
+* Enclosed in square brackets
+* Comma-separated list 
+
 
 [source%linenums,js,data-id=numbers]
 ----
 [4, 7, 0, -9, -10]
+[]
+[]
 ----
 
 [%auto-animate]
 === Arrays
-* Comma-separated list enclosed in square brackets
+* Enclosed in square brackets
+* Comma-separated list 
 * Can have combination of any data types
-
-[source%linenums,js,data-id=numbers]
-----
-[4, 7, 0, -9, -10]
-["blue", "red", "orange"]
-----
-
-[%auto-animate]
-=== Arrays
-* Comma-separated list enclosed in square brackets
-* Can have combination of any data types
-
 
 [source%linenums,js,data-id=numbers]
 ----
@@ -235,9 +233,11 @@ JSON is widely used in web APIs for exchanging data, as developers can easily pa
 [%auto-animate]
 === Objects
 * JSON's dictionaries enclosed in curly bracket
-* Key value pair separated by commas
-* Keys and values are separated by a colon
-* Key and value can be of any data type
+
+[source%linenums,js,data-id=numbers]
+----
+{}
+----
 
 [%auto-animate]
 === Objects
