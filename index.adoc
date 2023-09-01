@@ -305,10 +305,10 @@ Putting arrays and objects inside each other
 
 [source%linenums,js,data-id=numbers]
 |===
-2+| Fields | 
-| field_name1 | Data type? Description? Example Value? Required? Constraints? |
-| field_name2 | Data type? Description? Example Value? Required? Constraints? |
-| field_namen | Data type? Description? Example Value? Required? Constraints? |
+1+| Fields | 
+|field_name1|Data type? Description? Example Value? Required? Constraints?|
+|field_name2|Data type? Description? Example Value? Required? Constraints?|
+|field_namen|Data type? Description? Example Value? Required? Constraints?|
 |===
 
 [%auto-animate]
@@ -324,12 +324,21 @@ https://docs.servicenow.com/bundle/rome-application-development/page/integrate/i
 
 
 [source%linenums,js,data-id=numbers]
+[cols="1,1"]
 |===
-2+| Fields | 
-| field_name1 | Data type? Description? Example Value? Required? Constraints? |
-| field_name2 | Data type? Description? Example Value? Required? Constraints? |
-| field_namen | Data type? Description? Example Value? Required? Constraints? |
+2+| Fields
+| field_name_1 
+| Data type? Description? Example Value? Required? Constraints? 
+
+| field_name_2 
+| Data type? Description? Example Value? Required? Constraints? 
+
+| field_name_n 
+| Data type? Description? Example Value? Required? Constraints? 
 |===
+
+[%auto-animate]
+== Documenting JSON requests
 
 *Option 2* - https://www.ibm.com/docs/en/cloud-paks/cloud-pak-watson-aiops/4.1.0?topic=crds-aimodelui-v1
 
