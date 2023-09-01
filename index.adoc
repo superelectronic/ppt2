@@ -160,7 +160,7 @@ Structured data can have:
 
 == Why all this is important to know?
 
-* API reponses almost always have strcutured data
+* API rseponses almost always have structured data
 * API requests sometimes have strcutured data
 
 image::request-response.jpeg[]
@@ -198,8 +198,6 @@ JSON is widely used in web APIs for exchanging data, as developers can easily pa
 [source%linenums,js,data-id=numbers]
 ----
 []
-[]
-[]
 ----
 
 
@@ -212,8 +210,6 @@ JSON is widely used in web APIs for exchanging data, as developers can easily pa
 [source%linenums,js,data-id=numbers]
 ----
 [4, 7, 0, -9, -10]
-[]
-[]
 ----
 
 [%auto-animate]
@@ -277,8 +273,14 @@ Putting arrays and objects inside each other
 * Arrays inside Arrays
 * Objects inside objects
 
+== Real-world JSON examples:
+* https://cloud.google.com/life-sciences/docs/reference/rest/v2beta/projects.locations
+* https://help.hcltechsw.com/onedb/1.0.1/rest/rest_011.html#rest_011__query_all
+
 [%auto-animate]
 == Documenting JSON requests
+
+
 [source%linenums,js,data-id=numbers]
 |===
 | Field Name | Data Type | Description | Example Value | Required | Constraints
@@ -653,9 +655,9 @@ Note: All the data here is required. If not included, you may not get proper res
 |===
 | Field Name | Data Type | Description | Example Value
 
-| title
+| task_ID
 | string
-| The title of the task.
+| The ID of the task.
 | "Complete Project A"
 
 | status
