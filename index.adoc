@@ -302,19 +302,6 @@ Putting arrays and objects inside each other
 == Documenting JSON requests
 
 *Option 1*
-
-[source%linenums,js,data-id=numbers]
-|===
-1+| Fields | 
-|field_name1|Data type? Description? Example Value? Required? Constraints?|
-|field_name2|Data type? Description? Example Value? Required? Constraints?|
-|field_namen|Data type? Description? Example Value? Required? Constraints?|
-|===
-
-[%auto-animate]
-== Documenting JSON requests
-
-*Option 2*
 https://cloud.google.com/life-sciences/docs/reference/rest/v2beta/projects.locations
 https://docs.servicenow.com/bundle/rome-application-development/page/integrate/inbound-rest/concept/c_TableAPI.html
 
