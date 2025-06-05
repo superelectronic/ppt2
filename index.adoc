@@ -1,6 +1,6 @@
 
 = API Documentation Languages: A Deep Dive into JSON and XML
-:author: Gaurav Trivedi
+:author: Test
 :backend: revealjs
 :customcss: main.css
 :auto-animate-easing=ease-in-out: true
